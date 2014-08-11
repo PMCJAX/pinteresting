@@ -5,17 +5,16 @@ ruby '2.0.0'
 gem 'rails', '4.0.8'
 
 group :development, :test do
-  gem 'rspec-rails', '2.13.1'
   gem 'sqlite3'
 end
 
 group :test do
+  gem 'rspec-rails', '2.13.1'
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara', '2.1.0'
 end
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 
 
 # Use SCSS for stylesheets
@@ -42,15 +41,15 @@ gem 'jbuilder', '~> 1.2'
 # bootstrap based on OMR
 gem 'bootstrap-sass'
 gem 'sprockets', '2.11.0'
+
+group :production do
+	gem 'pg'
+	gem 'rails_12factor'
+end
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
-end
-
-
-group :production do
-  gem 'pg', '0.15.1'
-  gem 'rails_12factor', '0.0.2'
 end
 
 # Use ActiveModel has_secure_password
