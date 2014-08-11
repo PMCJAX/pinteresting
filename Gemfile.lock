@@ -145,7 +145,7 @@ GEM
       nokogiri (~> 1.3)
 
 PLATFORMS
-  x86-mingw32
+
 
 DEPENDENCIES
   bootstrap-sass
