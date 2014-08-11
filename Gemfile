@@ -5,6 +5,7 @@ gem 'rails', '4.0.8'
 
 group :development, :test do
   gem 'rspec-rails', '2.13.1'
+  gem 'sqlite3'
 end
 
 group :test do
@@ -13,7 +14,10 @@ group :test do
 end
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '1.3.8'
+group :production do
+   gem 'pg'
+   gem 'rails_12factor'
+end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
