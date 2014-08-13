@@ -11,6 +11,14 @@ describe "Pages" do
   		visit root_path
   		expect(page).to have_title('Home')
   	end
+
+    describe "for users not logged in" do
+      
+      it "should have link 'Sign Up'" do
+        visit root_path 
+        expect(page).to have_link('Login')
+      end
+    end  
   end
 
   describe "About page" do

@@ -4,7 +4,7 @@ $body-bg: 					#ecf0f1;
 $font-family-sans-serif: 	'Roboto', Arial;
 $navbar-default-bg: 		white;
 $navbar-default-link-color: #464646;
-$jumbotron-bg: 				#ccc;
+$jumbotron-bg: 				#fff;
 $navbar-default-brand-color:#c0392b;
 $brand-primary:				#c0392b;
 
@@ -13,3 +13,4 @@ $brand-primary:				#c0392b;
 
 .center { text-align:center; }
 .navbar-brand { font-weight:bold; }
+.nomargin {margin:0 !important;}
