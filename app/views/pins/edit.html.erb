@@ -2,5 +2,7 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @pin %> |
-<%= link_to 'Back', pins_path %>
+<%= link_to @pin do %>
+	<span class="glyphicon glyphicon-remove-circle"></span> Cancel 
+<% end %> 
+<!--| <%= link_to 'Back', pins_path %>-->

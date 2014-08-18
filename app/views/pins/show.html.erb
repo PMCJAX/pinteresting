@@ -3,9 +3,15 @@
 <div class="row">
 	<div class="col-md-offset-1 col-md-8">
 		<div class="actions">
-					<p><%= link_to 'Back', pins_path %>
-					<% if @pin.user == current_user %>
-					<%= link_to 'Edit', edit_pin_path(@pin) %></p>
+				<p><%= link_to pins_path do %>
+						<span class="glyphicon glyphicon-arrow-left"></span> Back
+					 <% end %>
+					 <% if @pin.user == current_user %>
+					 <%= link_to edit_pin_path(@pin) do %>
+					 	<span class="glyphicon glyphicon-edit"></span> Edit
+					 <% end %>
+
+				</p>
 				</div>
 		<div class="panel panel-default">
 			<div class="panel-heading center pinshow">
