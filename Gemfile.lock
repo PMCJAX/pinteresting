@@ -185,7 +185,7 @@ PLATFORMS
 
 DEPENDENCIES
   aws-sdk (~> 1.51.0)
-  bootstrap-sass
+  bootstrap-sass (= 3.1.1.1)
   capybara (= 2.1.0)
   coffee-rails (~> 4.0.0)
   devise (~> 3.2.4)
