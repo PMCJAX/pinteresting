@@ -182,6 +182,7 @@ GEM
 
 PLATFORMS
   ruby
+  x86-mingw32
 
 DEPENDENCIES
   aws-sdk (~> 1.51.0)
