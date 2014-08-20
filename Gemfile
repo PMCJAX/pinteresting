@@ -18,6 +18,7 @@ gem 'aws-sdk', '~> 1.51.0'
 gem 'masonry-rails', '~> 0.2.1'
 gem 'will_paginate', '~> 3.0.7'
 gem 'will_paginate-bootstrap', '~> 1.0.1'
+gem 'font_assets'
 
 group :development, :test do
   gem 'sqlite3'
