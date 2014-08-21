@@ -1,0 +1,71 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @plan.name %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @plan.company %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @plan.address %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @plan.phone %>
+</p>
+
+<p>
+  <strong>Fax:</strong>
+  <%= @plan.fax %>
+</p>
+
+<p>
+  <strong>Tollfree:</strong>
+  <%= @plan.tollfree %>
+</p>
+
+<p>
+  <strong>Goals:</strong>
+  <%= @plan.goals %>
+</p>
+
+<p>
+  <strong>Primary:</strong>
+  <%= @plan.primary %>
+</p>
+
+<p>
+  <strong>Secondary:</strong>
+  <%= @plan.secondary %>
+</p>
+
+<p>
+  <strong>Demographic:</strong>
+  <%= @plan.demographic %>
+</p>
+
+<p>
+  <strong>Competitors:</strong>
+  <%= @plan.competitors %>
+</p>
+
+<p>
+  <strong>Emails:</strong>
+  <%= @plan.emails %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @plan.notes %>
+</p>
+
+<% if @plan.user == current_user %>
+  <%= link_to 'Edit', edit_plan_path(@plan) %>
+<% end %>
+<%= link_to 'Back', plans_path %>

@@ -1,0 +1,100 @@
+<%= form_for(@plan) do |f| %>
+  <% if @plan.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@plan.errors.count, "error") %> prohibited this plan from being saved:</h2>
+
+      <ul>
+      <% @plan.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <div class="col-md-8">
+
+          <div class="well well-lg">
+            <div class="field form-group">
+              <%= f.label :name, 'Please provide your name, email, and contact phone number.' %><br>
+              <%= f.text_area :name, rows: "4", class: "form-control" %>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="field form-group">
+                  <%= f.label :company %><br>
+                  <%= f.text_field :company, class: "form-control" %>
+                </div>
+                <div class="field form-group">
+                  <%= f.label :address %><br>
+                  <%= f.text_field :address, class: "form-control" %>
+                </div>
+                <div class="col-md-4">
+                  <div class="field form-group">
+                    <%= f.label :phone %><br>
+                    <%= f.text_field :phone, class: "form-control" %>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="field form-group">
+                    <%= f.label :fax %><br>
+                    <%= f.text_field :fax, class: "form-control" %>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="field form-group">
+                    <%= f.label :tollfree %><br>
+                    <%= f.text_field :tollfree, class: "form-control" %>
+                  </div>
+                </div>
+                <div class="field form-group">
+                  <%= f.label :goals %><br>
+                  <%= f.text_field :goals, class: "form-control" %>
+                </div>
+                <div class="field form-group">
+                  <%= f.label :primary %><br>
+                  <%= f.text_field :primary, class: "form-control" %>
+                </div>
+                <div class="field form-group">
+                  <%= f.label :secondary %><br>
+                  <%= f.text_field :secondary, class: "form-control" %>
+                </div>
+                <div class="field form-group">
+                  <%= f.label :demographic %><br>
+                  <%= f.text_field :demographic, class: "form-control" %>
+                </div>
+                <div class="field form-group">
+                  <%= f.label :competitors %><br>
+                  <%= f.text_field :competitors, class: "form-control" %>
+                </div>
+                <div class="field form-group">
+                  <%= f.label :emails %><br>
+                  <%= f.text_field :emails, class: "form-control" %>
+                </div>
+                <div class="field form-group">
+                  <%= f.label :notes %><br>
+                  <%= f.text_area :notes, class: "form-control" %>
+                </div>
+                <div class="actions">
+                  <%= f.submit class: "btn btn-success" %>
+                </div>
+              </div><!-- end panel body -->
+            </div>
+    </div> <!-- end col md 8 center -->
+
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4>Sidebar Heading</h4>
+        </div>
+        <div class="panel-body">
+
+        </div>
+      </div>
+    </div>
+
+
+  </div><!-- end row -->
+<% end %>

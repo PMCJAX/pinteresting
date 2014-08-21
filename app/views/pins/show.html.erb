@@ -13,16 +13,18 @@
 
 				</p>
 				</div>
-		<div class="panel panel-default">
+			<div class="panel panel-default">
 			<div class="panel-heading center pinshow">
 				
 				<% end %>
 				<p><%= image_tag @pin.image.url %></p>
+				
 			</div>
 
 			<div class="panel-body">
 				<p><%= @pin.description %></p>
 				<p class="user"><%= @pin.user.name if @pin.user %></p>
+				<p><%= @pin.image.url %></p>
 
 			</div>
 

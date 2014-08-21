@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140817201150) do
+ActiveRecord::Schema.define(version: 20140820051128) do
 
   create_table "pins", force: true do |t|
     t.string   "description"
@@ -25,6 +25,27 @@ ActiveRecord::Schema.define(version: 20140817201150) do
   end
 
   add_index "pins", ["user_id"], name: "index_pins_on_user_id"
+
+  create_table "plans", force: true do |t|
+    t.string   "name"
+    t.string   "company"
+    t.string   "address"
+    t.string   "phone"
+    t.string   "fax"
+    t.string   "tollfree"
+    t.string   "goals"
+    t.string   "primary"
+    t.string   "secondary"
+    t.string   "demographic"
+    t.string   "competitors"
+    t.string   "emails"
+    t.string   "notes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  add_index "plans", ["user_id"], name: "index_plans_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
