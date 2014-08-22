@@ -7,9 +7,9 @@ $navbar-default-link-color: #464646;
 $jumbotron-bg: 				#fff;
 $navbar-default-brand-color:#c0392b;
 $brand-primary:				#c0392b;
+$icon-font-path: 'bootstrap/'; 
 
 @import "bootstrap-sprockets";
-$icon-font-path: 'bootstrap/'; 
 @import "bootstrap";
 
 .center { text-align:center; }
