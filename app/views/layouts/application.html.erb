@@ -8,33 +8,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+
 	<%= render 'layouts/header' %>
 	<div class="container">
 
 		<% flash.each do |name, msg| %>
-			<%= content_tag(:div, msg, class: "alert alert-info") %>
+			<%= content_tag(:div, msg, class: "alert alert-warning") %>
 		<% end %>
 
 		<%= yield %>
 
-	<div class="bottom">
-		<div class="row">
-			<hr />
-			<div class="col-md-4">
-				<p>This is left side</p>
-			</div>
-			<div class="col-md-4 col-md-offset-4">
-				<p>This is right side</p>
-			</div>
-
-		</div>
-	</div>
-	
-
-
 	</div><!-- end container -->
-
 	
+	<%= render 'layouts/footer' %>
+	
+	<div class="container">
+		<%= debug(params) if Rails.env.development? %>
+	</div>
 
 </body>
+
 </html>

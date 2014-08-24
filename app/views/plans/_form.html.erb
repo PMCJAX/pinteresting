@@ -1,100 +1,105 @@
 <%= form_for(@plan) do |f| %>
-  <% if @plan.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@plan.errors.count, "error") %> prohibited this plan from being saved:</h2>
+<% if @plan.errors.any? %>
+  <div class="alert alert-danger" role="alert">
+    <h3 class="nomargin"><%= pluralize(@plan.errors.count, "error") %> prohibited this plan from being saved:</h3>
+    <br />
+    <p>Please answer the required fields shown in red below.<br />
+      You can edit your plan and update your answers anytime, once the plan has been created.</p>
+  </div>
+<% end %>
 
-      <ul>
-      <% @plan.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+  <div class="col-md-4">
+    <div class="field form-group">
+      <%= f.label :name, 'please provide your name' %><br>
+      <%= f.text_field :name, class: "form-control" %>
     </div>
-  <% end %>
+  </div>
+  <div class="col-md-4">
+    <div class="field form-group">
+      <%= f.label :owneremail, 'email address' %><br>
+      <%= f.email_field :owneremail, class: "form-control" %>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="field form-group">
+      <%= f.label :ownerphone, 'contact phone number' %><br>
+      <%= f.text_field :ownerphone, class: "form-control" %>
+    </div>
+  </div>
+<br class="clear" />
 
-  <div class="row">
-    <div class="col-md-8">
-
-          <div class="well well-lg">
-            <div class="field form-group">
-              <%= f.label :name, 'Please provide your name, email, and contact phone number.' %><br>
-              <%= f.text_area :name, rows: "4", class: "form-control" %>
-            </div>
-          </div>
-
-          <div class="panel panel-default">
-            <div class="panel-body">
-                <div class="field form-group">
-                  <%= f.label :company %><br>
-                  <%= f.text_field :company, class: "form-control" %>
-                </div>
-                <div class="field form-group">
-                  <%= f.label :address %><br>
-                  <%= f.text_field :address, class: "form-control" %>
-                </div>
-                <div class="col-md-4">
-                  <div class="field form-group">
-                    <%= f.label :phone %><br>
-                    <%= f.text_field :phone, class: "form-control" %>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="field form-group">
-                    <%= f.label :fax %><br>
-                    <%= f.text_field :fax, class: "form-control" %>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="field form-group">
-                    <%= f.label :tollfree %><br>
-                    <%= f.text_field :tollfree, class: "form-control" %>
-                  </div>
-                </div>
-                <div class="field form-group">
-                  <%= f.label :goals %><br>
-                  <%= f.text_field :goals, class: "form-control" %>
-                </div>
-                <div class="field form-group">
-                  <%= f.label :primary %><br>
-                  <%= f.text_field :primary, class: "form-control" %>
-                </div>
-                <div class="field form-group">
-                  <%= f.label :secondary %><br>
-                  <%= f.text_field :secondary, class: "form-control" %>
-                </div>
-                <div class="field form-group">
-                  <%= f.label :demographic %><br>
-                  <%= f.text_field :demographic, class: "form-control" %>
-                </div>
-                <div class="field form-group">
-                  <%= f.label :competitors %><br>
-                  <%= f.text_field :competitors, class: "form-control" %>
-                </div>
-                <div class="field form-group">
-                  <%= f.label :emails %><br>
-                  <%= f.text_field :emails, class: "form-control" %>
-                </div>
-                <div class="field form-group">
-                  <%= f.label :notes %><br>
-                  <%= f.text_area :notes, class: "form-control" %>
-                </div>
-                <div class="actions">
-                  <%= f.submit class: "btn btn-success" %>
-                </div>
-              </div><!-- end panel body -->
-            </div>
-    </div> <!-- end col md 8 center -->
-
-    <div class="col-md-4">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4>Sidebar Heading</h4>
-        </div>
-        <div class="panel-body">
-
+<div class="panel panel-default">
+  <div class="panel-body">
+      <div class="field form-group">
+        <%= f.label :domain, 'Project domain name' %><br>
+        <%= f.text_field :domain, class: "form-control" %>
+      </div>
+      <div class="field form-group">
+        <%= f.label :company, 'Business Name as you want it to appear on your website' %><br>
+        <%= f.text_field :company, class: "form-control" %>
+      </div>
+      <div class="field form-group">
+        <%= f.label :address, 'Business physical address' %><br>
+        <%= f.text_field :address, class: "form-control" %>
+      </div>
+      <div class="col-md-4">
+        <div class="field form-group">
+          <%= f.label :phone, 'Business phone' %><br>
+          <%= f.text_field :phone, class: "form-control" %>
         </div>
       </div>
-    </div>
+      <div class="col-md-4">
+        <div class="field form-group">
+          <%= f.label :fax, 'Fax' %><br>
+          <%= f.text_field :fax, class: "form-control" %>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="field form-group">
+          <%= f.label :tollfree, 'Toll-Free'  %><br>
+          <%= f.text_field :tollfree, class: "form-control" %>
+        </div>
+      </div>
+      <div class="field form-group">
+        <%= f.label :goals, 'What is the most important goal you have for your new website or marketing services?' %><br>
+        <%= f.text_area :goals, class: "form-control" %>
+      </div>
+      <div class="field form-group">
+        <%= f.label :primary, 'What are the 3 most important products/services you wish to be found for in Google?' %><br>
+        <%= f.text_field :primary, class: "form-control" %>
+      </div>
+      <div class="field form-group">
+        <%= f.label :secondary, 'What are the next 3-5 important products/services you wish to be found for in Google?' %><br>
+        <%= f.text_field :secondary, class: "form-control" %>
+      </div>
+      <div class="field form-group">
+        <%= f.label :demographic, 'Demographic:  Please describe your current customer and the type of customer you want more of' %><br>
+        <%= f.text_field :demographic, class: "form-control" %>
+      </div>
+      <div class="field form-group">
+        <%= f.label :websites, 'Does your business have any other websites, owned by you or built/managed by another company?' %><br>
+        <%= f.text_field :websites, class: "form-control" %>
+      </div>
+      <div class="field form-group">
+        <%= f.label :dollars, 'How much do you currently spend each month for online marketing? (Google Adwords, YP.com, etc)' %><br>
+        <%= f.text_field :dollars, class: "form-control" %>
+      </div>
+      <div class="field form-group">
+        <%= f.label :competitors, 'Who are your top 2 competitors online?' %><br>
+        <%= f.text_field :competitors, class: "form-control" %>
+      </div>
+      <div class="field form-group">
+        <%= f.label :emails, 'If we will be hosting your email, please tell us each email address you will need. ($1 per mailbox, per month)' %><br>
+        <%= f.text_area :emails, class: "form-control" %>
+      </div>
+      <div class="field form-group">
+        <%= f.label :notes %><br>
+        <%= f.text_area :notes, class: "form-control" %>
+      </div>
+      <div class="actions">
+        <%= f.submit class: "btn btn-success" %>
+      </div>
+    </div><!-- end panel body -->
+  </div>
 
-
-  </div><!-- end row -->
 <% end %>

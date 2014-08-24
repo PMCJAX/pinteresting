@@ -10,7 +10,10 @@
           <span class="icon-bar"></span>
         </button>
         <!-- <%= link_to "Pinteresting", root_path, class: "navbar-brand" %> -->
-        <%= image_tag "logo.png" %>
+        <div class="logo">
+          <%= link_to image_tag('logo.png'), root_path %> 
+        </div>
+        <p class="logobrand">Fuel</p>
         
       </div>
 

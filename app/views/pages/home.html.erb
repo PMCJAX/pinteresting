@@ -1,48 +1,41 @@
 	<% provide(:title, 'Home') %>
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-  </ol>
 
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="item active">
-      <%= image_tag "1.jpg" %>
-      <div class="carousel-caption">
-        <h2>Pretty Cool</h2>
-        <p>That this comes with bootstrap</p>
-      </div>
-    </div>
-    <div class="item">
-      <%= image_tag "1.jpg" %>
-      <div class="carousel-caption">
-        <h2>Same Image</h2>
-        <p>Just for testing.</p>
-      </div>
+<div class="jumbotron center bigtopmargin">
+  <h1 class="nomargin">Our Success Starts Here</h1>
+  
+    <% if user_signed_in? %>
+    <hr />
+      <p>The Marketing Profile provides critical information about your business and goals.<br />
+        Your Asset Library is a cloud storage platform for all project images, logos, and documents.</p>
+    <% else %>
+      <p class="bigtopmargin">
+      <%= link_to "Login", new_user_session_path, class: "btn btn-default btn-lg" %>
+      <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+      </p>
+    <% end %>
+    
+  
+</div>
+
+<div class="row">
+
+  <div class="col-md-6">
+    <div class="cta-home center">
+      <%= link_to plans_path do %>
+        <span class="glyphicon glyphicon-fire glyphicon-cta"></span>
+        <h2>Marketing Profile</h2>
+      <% end %>
     </div>
   </div>
 
-  <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-  </a>
+  <div class="col-md-6">
+    <div class="cta-home center">
+      <%= link_to pins_path do %>
+        <span class="glyphicon glyphicon-cloud-upload glyphicon-cta"></span>
+        <h2>Asset Library</h2>
+      <% end %>
+    </div>
+  </div>
+
 </div>
-<div class="jumbotron center">
-	<h1>Welcome to my app!</h1>
-	<p>
-		<% if user_signed_in? %>
-			<p>Welcome Back!</p>
-		<% else %>
-			<p>
-			<%= link_to "Login", new_user_session_path, class: "btn btn-default btn-lg" %>
-			<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
-			</p>
-		<% end %>
-		
-	</p>
-</div>
+

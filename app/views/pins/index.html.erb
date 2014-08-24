@@ -1,3 +1,9 @@
+<div class="asset-actions center">
+  <%= link_to root_path do %>
+    <span class="glyphicon glyphicon-arrow-left"></span> Back
+  <% end %>
+  <%= link_to "Add New File", new_pin_path, class: "btn btn-lg btn-success" %>
+</div>
 <div id="pins" class="transitions-enabled">
   <% @pins.each do |pin| %>
     <div class="box panel default-panel">
@@ -6,6 +12,7 @@
         <p><%= pin.description %></p>
         <p class="user"><%= pin.user.name if pin.user %></p>
         <% if user_signed_in? && pin.user == current_user %>
+          <!--
           <div class="actions">
             <%= link_to edit_pin_path(pin) do %>
               <span class="glyphicon glyphicon-edit"></span> Edit
@@ -14,14 +21,17 @@
               <span class="glyphicon glyphicon-trash"></span> Delete
             <% end %>
           </div>
+          -->
         <% end %>  
       </div>
     </div>
   <% end %>
 </div>
-
-<div class="center">
-  <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+<br class="clear" />
+<div class="row">
+  <div class="center">
+    <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+  </div>
 </div>
 
   

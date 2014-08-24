@@ -1,71 +1,133 @@
 <p id="notice"><%= notice %></p>
+<div class="asset-actions">
+  <%= link_to plans_path do %>
+    <span class="glyphicon glyphicon-arrow-left"></span> Back
+  <% end %>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @plan.name %>
-</p>
+<div class="row">
+    <div class="col col-md-8">
+      <div class="panel panel-blue">
+        <div class="panel-heading">
+          <%= @plan.company %>
+          <div class="right">
+            <% if @plan.user == current_user %>
+              <%= link_to edit_plan_path(@plan) do %>
+                <span class="glyphicon glyphicon-edit"></span> Edit
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="col-md-2">
+            <strong>Plan Creator: </strong>
+          </div>
+          <div class="col-md-3">
+            <%= @plan.name %>
+          </div>
+          <div class="col-md-3">
+            <%= @plan.owneremail %>
+          </div>
+          <div class="col-md-3">
+            <%= @plan.ownerphone %>
+          </div>
+        </div>
+      <!--  </div>  -->
 
-<p>
-  <strong>Company:</strong>
-  <%= @plan.company %>
-</p>
+      <div class="panel-footer">
+          <p>
+            <strong>Project domain name:</strong><br />
+            <%= @plan.domain %>
+          </p>
+          <hr />
 
-<p>
-  <strong>Address:</strong>
-  <%= @plan.address %>
-</p>
+          <p>
+            <strong>Business Name as you want it to appear on website:</strong><br />
+            <%= @plan.company %>
+          </p>
+          <hr />
 
-<p>
-  <strong>Phone:</strong>
-  <%= @plan.phone %>
-</p>
+          <p>
+            <strong>Business physical address:</strong><br />
+            <%= @plan.address %>
+          </p>
+          <hr />
 
-<p>
-  <strong>Fax:</strong>
-  <%= @plan.fax %>
-</p>
+          <p>
+            <strong>Business phone:</strong><br />
+            <%= @plan.phone %>
+          </p>
+          <hr />
 
-<p>
-  <strong>Tollfree:</strong>
-  <%= @plan.tollfree %>
-</p>
+          <p>
+            <strong>Business fax:</strong><br />
+            <%= @plan.fax %>
+          </p>
+          <hr />
 
-<p>
-  <strong>Goals:</strong>
-  <%= @plan.goals %>
-</p>
+          <p>
+            <strong>Toll-Free:</strong><br />
+            <%= @plan.tollfree %>
+          </p>
+          <hr />
 
-<p>
-  <strong>Primary:</strong>
-  <%= @plan.primary %>
-</p>
+          <p>
+            <strong>What is the most important goal you have for your new website or marketing services?</strong><br />
+            <%= @plan.goals %>
+          </p>
+          <hr />
 
-<p>
-  <strong>Secondary:</strong>
-  <%= @plan.secondary %>
-</p>
+          <p>
+            <strong>What are the 3 most important products/services you wish to be found for in Google?</strong><br />
+            <%= @plan.primary %>
+          </p>
+          <hr />
 
-<p>
-  <strong>Demographic:</strong>
-  <%= @plan.demographic %>
-</p>
+          <p>
+            <strong>What are the <em>next</em> 3-5 important products/services you wish to be found for in Google?</strong><br />
+            <%= @plan.secondary %>
+          </p>
+          <hr />
 
-<p>
-  <strong>Competitors:</strong>
-  <%= @plan.competitors %>
-</p>
+          <p>
+            <strong>Demographic: Please describe your current customer and the type of customer you want more of:</strong><br />
+            <%= @plan.demographic %>
+          </p>
+          <hr />
 
-<p>
-  <strong>Emails:</strong>
-  <%= @plan.emails %>
-</p>
+          <p>
+            <strong>Does your business have any other websites, owned by you or built/managed by another company?</strong><br />
+            <%= @plan.websites %>
+          </p>
+          <hr />
 
-<p>
-  <strong>Notes:</strong>
-  <%= @plan.notes %>
-</p>
+          <p>
+            <strong>How much do you currently spend each month for online marketing? (Google Adwords, YP.com, etc)</strong><br />
+            <%= @plan.dollars %>
+          </p>
+          <hr />
 
-<% if @plan.user == current_user %>
-  <%= link_to 'Edit', edit_plan_path(@plan) %>
-<% end %>
-<%= link_to 'Back', plans_path %>
+          <p>
+            <strong>Who are your top 2 competitors online?</strong><br />
+            <%= @plan.competitors %>
+          </p>
+          <hr />
+
+          <p>
+            <strong>If we will be hosting your email, please tell us each email address you will need. ($1 per mailbox, per month)</strong><br />
+            <%= @plan.emails %>
+          </p>
+          <hr />
+
+          <p>
+            <strong>Notes:</strong><br />
+            <%= @plan.notes %>
+          </p><br />
+        </div>
+      </div>
+
+  </div> <!-- end col md 8 -->
+    <%= render 'layouts/sidebar' %>
+</div><!-- end row -->
+
+

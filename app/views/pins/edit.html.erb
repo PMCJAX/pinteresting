@@ -1,8 +1,15 @@
 <h1>Editing pin</h1>
 
-<%= render 'form' %>
+<div class="row">
+    <div class="col col-md-8">
 
-<%= link_to @pin do %>
-	<span class="glyphicon glyphicon-remove-circle"></span> Cancel 
-<% end %> 
-<!--| <%= link_to 'Back', pins_path %>-->
+		<%= render 'form' %>
+
+		<%= link_to @pin do %>
+			<span class="glyphicon glyphicon-remove-circle"></span> Cancel 
+		<% end %>
+
+	</div> <!-- end col md 8 -->
+    <%= render 'layouts/sidebar' %>
+</div><!-- end row --> 
+

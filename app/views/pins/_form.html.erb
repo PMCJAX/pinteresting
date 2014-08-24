@@ -1,24 +1,30 @@
-<%= form_for @pin, html: { multipart: true } do |f| %>
-  <% if @pin.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@pin.errors.count, "error") %> prohibited this pin from being saved:</h2>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <%= form_for @pin, html: { multipart: true } do |f| %>
+          <% if @pin.errors.any? %>
+            <div class="alert alert-danger" role="alert">
+              <h2><%= pluralize(@pin.errors.count, "error") %> prohibited this pin from being saved:</h2>
 
-      <ul>
-      <% @pin.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <div class="field form-group">
-    <%= f.label :image %><br>
-    <%= f.file_field :image %>
-  </div>
-  <div class="field form-group">
-    <%= f.label :description, 'Describe Image' %><br>
-    <%= f.text_field :description, class: "form-control" %>
-  </div>
-  <div class="actions form-group">
-    <%= f.submit class: "btn btn-primary" %>
-  </div>
-<% end %>
+              <ul>
+              <% @pin.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
+          <div class="field form-group">
+            <%= f.label :image %><br>
+            <%= f.file_field :image %>
+          </div>
+          <div class="field form-group">
+            <%= f.label :description, 'Describe Image' %><br>
+            <%= f.text_field :description, class: "form-control" %>
+          </div>
+          <div class="actions form-group">
+            <%= f.submit class: "btn btn-primary" %>
+          </div>
+        <% end %>
+      </div><!-- end panel body -->
+    </div><!-- end panel -->
+
+  
