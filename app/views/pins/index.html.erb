@@ -4,6 +4,12 @@
   <% end %>
   <%= link_to "Add New Image", new_pin_path, class: "btn btn-lg btn-success" %>
 </div>
+<div class="row">
+  <div class="center">
+    <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+  </div>
+</div>
+<br class="clear" />
 <div id="pins" class="transitions-enabled">
   <% @pins.each do |pin| %>
     <div class="box panel default-panel">
@@ -28,10 +34,6 @@
   <% end %>
 </div>
 <br class="clear" />
-<div class="row">
-  <div class="center">
-    <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
-  </div>
-</div>
+
 
   
