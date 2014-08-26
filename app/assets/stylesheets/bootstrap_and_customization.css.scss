@@ -11,7 +11,13 @@ $brand-primary:				#c0392b;
 @import "bootstrap";
 
 
-body { background: url('http://crownpoolsinc.com/img/pat2.png');  }
+body { 
+  background: url('http://crownpoolsinc.com/img/pat2.png');
+  color: #333333;
+  font-family: "Roboto",Arial;
+  font-size: 16px;
+  line-height: 1.6;
+}
 
 h1 { margin: 30px 0 20px 0; }
 h2 { margin: 25px 0 15px 0; }
@@ -42,6 +48,14 @@ a:hover { color: #EF8F00; text-decoration:none; }
 
 .field_with_errors { color: #A84F43; display:inline;}
 .field_with_errors input, .field_with_errors textarea { border: 1px solid #A84F43; }
+
+.greyhorizontal {
+    background: none repeat scroll 0 0 #707070;
+    border-bottom: 1px solid #FFF;
+    border-top: 1px solid #111;
+    height: 4px;
+    margin-bottom:20px;
+}
 
 /*  Logo  */
 .logo { float:left; }
@@ -108,10 +122,4 @@ footer ul li {
   margin-left: 10px;
 }
 
-.greyhorizontal {
-    background: none repeat scroll 0 0 #707070;
-    border-bottom: 1px solid #FFF;
-    border-top: 1px solid #111;
-    height: 4px;
-    margin-bottom:20px;
-}
+

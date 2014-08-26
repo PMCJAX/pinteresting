@@ -13,15 +13,15 @@
             </div>
           <% end %>
           <div class="field form-group">
-            <%= f.label :image %><br>
+            <%= f.label :image, "Add an image" %><br>
             <%= f.file_field :image %>
           </div>
           <div class="field form-group">
-            <%= f.label :description, 'Describe Image' %><br>
+            <%= f.label :description, 'Add a description. Tell us if you want this image used on a specific page or featured on a blog post.' %><br>
             <%= f.text_field :description, class: "form-control" %>
           </div>
           <div class="actions form-group">
-            <%= f.submit class: "btn btn-primary" %>
+            <%= f.submit "Create", class: "btn btn-primary" %>
           </div>
         <% end %>
       </div><!-- end panel body -->

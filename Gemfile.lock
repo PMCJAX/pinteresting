@@ -86,6 +86,7 @@ GEM
     nokogiri (1.6.2.1)
       mini_portile (= 0.6.0)
       mini_portile (= 0.6.0)
+      mini_portile (= 0.6.0)
     orm_adapter (0.5.0)
     paperclip (4.2.0)
       activemodel (>= 3.0.0)
