@@ -13,6 +13,9 @@
 					 <%= link_to @pin, method: :delete, data: { confirm: 'Are you sure?' } do %>
               			<span class="glyphicon glyphicon-trash"></span> Delete
             		 <% end %>
+            		 <%= link_to new_pin_path(@pin) do %>
+					 	<span class="glyphicon glyphicon-plus"></span> Add Another Image
+					 <% end %>
 
 				</p>
 				</div>
