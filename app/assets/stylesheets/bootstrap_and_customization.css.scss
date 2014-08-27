@@ -89,7 +89,19 @@ span.glyphicon-cta { font-size: 17em; }
 
 
 /* Sidebar */
-.sidebar {  }
+.sidebar ul.social { list-style:none; overflow:auto; margin:0; padding:0;}
+.sidebar ul.social li { width: 40px; height: 40px; margin: 0; float: left; }
+.sidebar ul.social li a { width: 40px; height: 40px; display:block; background-image:image-url("social.png");}
+.sidebar ul.social li a.fb { background-position:0px -40px; text-indent:-9999px;}
+.sidebar ul.social li a.fb:hover { background-position:0 0px; text-indent:-9999px;}
+.sidebar ul.social li a.tw { background-position:-41px -40px; text-indent:-9999px;}
+.sidebar ul.social li a.tw:hover { background-position:-41px 0px; text-indent:-9999px;}
+.sidebar ul.social li a.yt { background-position:-82px -40px; text-indent:-9999px;}
+.sidebar ul.social li a.yt:hover { background-position:-82px 0px; text-indent:-9999px;}
+.sidebar ul.social li a.lk { background-position:-162px -40px; text-indent:-9999px;}
+.sidebar ul.social li a.lk:hover { background-position:-162px 0px; text-indent:-9999px;}
+.sidebar ul.social li a.gplus { background-position:-245px -40px; text-indent:-9999px;}
+.sidebar ul.social li a.gplus:hover { background-position:-245px 0px; text-indent:-9999px;}
 
 /* Footer */
 
