@@ -11,7 +11,7 @@
         <div class="panel-heading">
           <%= @plan.company %>
           <div class="right">
-            <% if @plan.user == current_user %>
+            <% if @plan.user == current_user or current_user.admin? %>
               <%= link_to edit_plan_path(@plan) do %>
                 <span class="glyphicon glyphicon-edit"></span> Edit
               <% end %>

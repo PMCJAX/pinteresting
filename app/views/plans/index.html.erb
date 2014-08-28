@@ -13,7 +13,7 @@
      <br />
 
       <% @plans.each do |plan| %>
-        <% if plan.user == current_user %>
+        <% if plan.user == current_user or current_user.admin? %>
           
           <div class="panel panel-default">
             <div class="panel-heading">

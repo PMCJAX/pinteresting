@@ -13,7 +13,7 @@
 <br class="clear" />
 <div id="pins" class="transitions-enabled">
   <% @pins.each do |pin| %>
-    <% if pin.user == current_user %>
+    <% if pin.user == current_user or current_user.admin? %>
       <div class="box panel default-panel">
         <%= link_to image_tag(pin.image.url(:medium)), pin %>
         <div class="panel-body">
