@@ -19,8 +19,9 @@
         <div class="panel-body">
           <p><%= pin.description %></p>
           <p class="user"><%= pin.user.name if pin.user %></p>
-          <% if user_signed_in? && pin.user == current_user %>
-            <!--
+          
+          <!--<% if user_signed_in? && pin.user == current_user %>
+            
             <div class="actions">
               <%= link_to edit_pin_path(pin) do %>
                 <span class="glyphicon glyphicon-edit"></span> Edit
@@ -29,8 +30,8 @@
                 <span class="glyphicon glyphicon-trash"></span> Delete
               <% end %>
             </div>
-            -->
-          <% end %>  
+          <% end %> -->
+ 
         </div>
       </div>
     <% end %>

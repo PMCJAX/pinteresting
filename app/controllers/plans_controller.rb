@@ -50,8 +50,12 @@ class PlansController < ApplicationController
     end
 
     def correct_user
+      if current_user.try(:admin?)
+        @plan = Plan.find_by(id: params[:id])
+      else
       @plan = current_user.plans.find_by(id: params[:id])
       redirect_to plans_path, notice: "Not authorized to view or modify this Plan" if @plan.nil?
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
